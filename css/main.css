@@ -1680,15 +1680,15 @@ button{
 
 .bg-secondary-900{
   --tw-bg-opacity: 1;
-  background-color: rgb(23 32 42 / var(--tw-bg-opacity, 1));
+  background-color: rgb(26 51 77 / var(--tw-bg-opacity, 1));
 }
 
 .bg-secondary-900\/40{
-  background-color: rgb(23 32 42 / 0.4);
+  background-color: rgb(26 51 77 / 0.4);
 }
 
 .bg-secondary-900\/80{
-  background-color: rgb(23 32 42 / 0.8);
+  background-color: rgb(26 51 77 / 0.8);
 }
 
 .bg-success{
@@ -1740,20 +1740,20 @@ button{
 }
 
 .from-secondary-900\/80{
-  --tw-gradient-from: rgb(23 32 42 / 0.8) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(23 32 42 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: rgb(26 51 77 / 0.8) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(26 51 77 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-secondary-900\/90{
-  --tw-gradient-from: rgb(23 32 42 / 0.9) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(23 32 42 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: rgb(26 51 77 / 0.9) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(26 51 77 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .via-secondary-800\/80{
-  --tw-gradient-to: rgb(28 40 51 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), rgb(28 40 51 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(36 71 102 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(36 71 102 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-accent-50{
@@ -1975,12 +1975,12 @@ button{
 
 .text-secondary{
   --tw-text-opacity: 1;
-  color: rgb(44 62 80 / var(--tw-text-opacity, 1));
+  color: rgb(51 102 153 / var(--tw-text-opacity, 1));
 }
 
 .text-secondary-900{
   --tw-text-opacity: 1;
-  color: rgb(23 32 42 / var(--tw-text-opacity, 1));
+  color: rgb(26 51 77 / var(--tw-text-opacity, 1));
 }
 
 .text-success{
@@ -2100,7 +2100,7 @@ button{
 
 .hover\:text-secondary:hover{
   --tw-text-opacity: 1;
-  color: rgb(44 62 80 / var(--tw-text-opacity, 1));
+  color: rgb(51 102 153 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover{
