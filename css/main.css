@@ -2284,6 +2284,11 @@ button {
   width: 278px;
   object-fit: contain;
 }
+@media (max-width:750px){
+  .awardsCards {
+  border-right:none;
+}
+}
 
 /*================================================
 Admission Area Style
