@@ -736,6 +736,9 @@ h1 {
     font-size: 3rem;
     line-height: 1;
   }
+  .programs-section-title .programs-nav-tab .nav .nav-item .nav-link {
+  font-size: 18px;
+}
 }
 
 @media (min-width: 1024px) {
@@ -2669,6 +2672,11 @@ Page Banner Area Style
   background-position: center center;
   background-image: url(../public/images/bg-3.jpg);
 }
+@media (max-width:780px){
+  .pages-banner-area {
+   padding-top: 100px!important;
+  }
+}
 
 .pages-banner-area .container-fluid {
   max-width: 1480px;
@@ -3242,6 +3250,7 @@ Programs Area Style
   position: relative;
   color: rgb(0, 30, 67);
   background-color: transparent;
+  /* font-size: 18px; */
 }
 .programs-section-title .programs-nav-tab .nav .nav-item .nav-link::before {
   left: 0;
