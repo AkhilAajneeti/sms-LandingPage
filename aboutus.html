@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="School of Management Sciences, Varanasi is a NAAC ‘A’ accredited Autonomous College in Varanasi Affiliated to AKTU and MGKVP ranked among top 50 B-schools offering professional courses like MBA, MCA, M.Com, BBA, B.Com(Hons), BCA and BA(Hons) Mass Comm. with a robust placement record, in renowned companies across India.">
+    <meta name="keywords"
+        content="School of Management Sciences, Varanasi is a NAAC ‘A’ accredited Autonomous College in Varanasi Affiliated to AKTU and MGKVP ranked among top 50 B-schools offering professional courses like MBA, MCA, M.Com, BBA, B.Com(Hons), BCA and BA(Hons) Mass Comm. with a robust placement record, in renowned companies across India.">
+    <title>SMS-VARANASI | SCHOOL OF MANAGEMENT SCIENCES</title>
+    <link rel="shortcut icon" href="/public/images/icons/logoMain.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script type="module" async
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fsmsvarana3204back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300"
+        id="mainHeader">
+        <nav class="container-custom">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 group text-decoration-none">
+
+                    <img src="/public/images/icons/logoMain.png" alt="" style="width: 180px;">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8 navlink">
+                    <a href="index.html"
+                        class="font-cta font-semibold text-primary hover:text-primary-700 transition-colors duration-300">Home</a>
+                    <a href="programs.html"
+                        class="font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">Programs</a>
+                    <a href="javascript:void(0)"
+                        class="font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">Placements</a>
+                    <a href="javascript:void(0)"
+                        class="font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">Campus
+                        Life</a>
+                    <a href="javascript:void(0)"
+                        class="font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">About</a>
+                    <a href="javascript:void(0)"
+                        class="font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">Contact</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button class=" btn-2" onclick="openInquiryModal()">
+                        <img src="public/images/icons/call.png" alt="Phone icon" class="w-7 h-7 mr-2">
+                        Request Callback
+                    </button>
+                    <button class="btn bg-mehrron" onclick="openApplicationModal()">
+                        Apply Now
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 text-secondary hover:text-primary transition-colors" id="mobileMenuBtn">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1bd13d883-1764678164691.png"
+                        alt="Menu icon" class="w-8 h-8">
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden" id="mobileMenu">
+                <div class="py-4 space-y-4 border-t border-border">
+                    <a href="homepage.html"
+                        class="block font-cta font-semibold text-primary hover:text-primary-700 transition-colors duration-300">Home</a>
+                    <a href="javascript:void(0)"
+                        class="block font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">Programs</a>
+                    <a href="javascript:void(0)"
+                        class="block font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">Placements</a>
+                    <a href="javascript:void(0)"
+                        class="block font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">Campus
+                        Life</a>
+                    <a href="javascript:void(0)"
+                        class="block font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">About</a>
+                    <a href="javascript:void(0)"
+                        class="block font-cta font-semibold text-text-primary hover:text-primary transition-colors duration-300">Contact</a>
+                    <div class="pt-4 space-y-3">
+                        <button class="btn btn-outline w-full" onclick="openInquiryModal()">Request Callback</button>
+                        <button class="btn btn-primary w-full" onclick="openApplicationModal()">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Start Pages Banner Area -->
+    <div class="pages-banner-area position-relative">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="pages-title">
+                        <h2>About SMS</h2>
+                        <ul class="list-unstyled ps-0 mb-0">
+                            <li class="d-inline-block">
+                                <a class="text-decoration-none" href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="d-inline-block">
+                                SMS Varanasi Overview
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pages-image">
+                        <img src="/public/images/pages-1.jpg" alt="pages-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-7">
+            <img src="/public/images/shape-7.png" alt="shape">
+        </div>
+    </div>
+    <!-- End Pages Banner Area -->
+
+    <!-- Start Overview Area -->
+    <div class="overview-area pb-75 pt-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="overview-content">
+                        <div class="image" data-aos="fade-right">
+                            <img src="https://images.pexels.com/photos/23018668/pexels-photo-23018668.jpeg"
+                                alt="overview-image">
+                        </div>
+                        <div class="row align-items-center" data-cues="slideInUp">
+                            <div class="col-lg-12 col-sm-12 col-md-12">
+                                <p style="text-align: justify;">School of Management Sciences Varanasi, popularly known
+                                    as SMS
+                                    Varanasi, has been a
+                                    pristine institution attracting hues of both a new age B-School as well as an
+                                    archaic academic house. A 1995-born institution in the holy city of Varanasi (Kashi)
+                                    witnessed an auspicious time, the childhood period of the opening economy, and
+                                    received a thumping welcome by virtue of being the first of its kind of
+                                    self-financed institution in the region.</p>
+                                <p style="text-align: justify;">SMS Varanasi is a NAAC ‘A’ Grade Accredited Institution
+                                    that further maintains a visible position in the high-profile bracket of ’Top 50
+                                    B-Schools in India’. Committed to nurture academic and intellectual strivings,
+                                    vibrant co- & extra-curricular activities, outreach initiatives and civic
+                                    engagements of a high order.</p>
+                                <div class="flex align-items-center justify-content-between">
+                                    <div class="graduets-counter">
+                                        <h2 class="d-flex align-items-center">
+                                            <img src="/public/images/icons/higher-education.png" alt="graduets-svg">
+                                            <span data-count="50">0</span>
+                                            +
+                                        </h2>
+                                        <p>Our graduates programs</p>
+                                    </div>
+                                    <div class="graduets-btn text-end d-sm-block d-none">
+                                        <a class="text-decoration-none arrow-btn hoverBtn" href="programs.html">
+                                            More Graduates Programs
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="overview-image">
+                        <div class="title">
+                            <h2 class="d-flex align-items-center color-mehrron">
+                                <img src="/public/images/icons/graduationerd-hat.png" alt="title-shape">
+                                SMS University
+                            </h2>
+                            <p style="text-align: justify;">School of Management Sciences Varanasi, popularly known as
+                                SMS
+                                Varanasi, has been a
+                                pristine institution attracting hues of both a new age B-School as well as an archaic
+                                academic house. A 1995-born institution in the holy city of Varanasi (Kashi) witnessed
+                                an auspicious time, the childhood period of the opening economy, and received a thumping
+                                welcome by virtue of being the first of its kind of self-financed institution in the
+                                region. Nurtured and groomed under the ethical guidelines of Dr. Bhisma Narayan Singh
+                                and academic care of renowned professors in the relevant areas, SMS Varanasi could
+                                attain the grit to imbibe the core value of ‘Quality’ in the underpinnings of its very
+                                foundation in order to pioneer the spread of management and other professional education
+                                in accordance with the spirit of Higher Education in this part of the country.</p>
+                        </div>
+
+                        <div class="casual-image pages-style " data-aos="fade-left">
+                            <img src="https://images.pexels.com/photos/5553050/pexels-photo-5553050.jpeg"
+                                alt="overview-image">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Overview Area -->
+
+    <!-- Start Funfact Area -->
+    <div class="funfact-area pb-75">
+        <div class="container">
+            <h2 class="text-center pb-4 color-yellow fw-bold">University Highlights</h2>
+            <div class="row g-0 justify-content-center" data-cues="slideInUp">
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="single-funfact-info text-center">
+                        <h2 class="d-flex align-items-center justify-content-center">
+                            <img src="/public/images/icons/graduation-hat-and-diploma.png" alt="">&nbsp;
+                            <span data-count="11500">0</span>
+                            +
+                        </h2>
+                        <p>STUDENTS</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="single-funfact-info text-center">
+                        <h2 class="d-flex align-items-center justify-content-center">
+                            <img src="/public/images/icons/job-offer.png" alt="">&nbsp;
+                            <span data-count="500">0</span>
+                            +
+                        </h2>
+                        <p>COMPANIES FOR PLACEMENTS</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="single-funfact-info text-center">
+                        <h2 class="d-flex align-items-center justify-content-center">
+                            <img src="/public/images/icons/graduated.png" alt="">&nbsp;
+                            <span data-count="90">0</span>
+                            % +
+                        </h2>
+                        <p>PH.D. FACULTY</p>
+                    </div>
+                </div>
+                <!-- 2nd -->
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="single-funfact-info text-center">
+                        <h2 class="d-flex align-items-center justify-content-center">
+                            <img src="/public/images/icons/development.png" alt="">&nbsp;
+                            <span data-count="11500">0</span>
+                            +
+                        </h2>
+                        <p>CORPORATE COLLABORATIONS</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="single-funfact-info text-center">
+                        <h2 class="d-flex align-items-center justify-content-center">
+                            <img src="/public/images/icons/startup.png" alt="">&nbsp;
+                            <span data-count="500">0</span>
+                            +
+                        </h2>
+                        <p>STARTUPS LAUNCHED</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="single-funfact-info text-center">
+                        <h2 class="d-flex align-items-center justify-content-center">
+                            <img src="/public/images/icons/physical.png" alt="">&nbsp;
+                            <span data-count="90">0</span>
+                            % +
+                        </h2>
+                        <p>SPORTS FACILITIES</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Funfact Area -->
+
+    <!-- timeline -->
+    <div class="timeLine">
+        <div class="container">
+            <h2 class="text-center pb-4 color-yellow fw-bold">A Legacy of Trust</h2>
+
+            <ul>
+                <li style="--accent-color:#41516C" data-aos="fade-right">
+                    <div class="date">1995</div>
+                    <div class="title">Foundation of SMS Varanasi</div>
+                    <div class="descr"> Established in the holy city of Varanasi (Kashi), SMS Varanasi emerged as
+                        the first self-financed institution in the region during the opening phase
+                        of India’s liberalized economy.</div>
+                </li>
+                <li style="--accent-color:#FBCA3E" data-aos="fade-left">
+                    <div class="date">Late 1990s</div>
+                    <div class="title">Vision of Quality Education</div>
+                    <div class="descr">Nurtured under the ethical guidance of Dr. Bhisma Narayan Singh and eminent
+                        academicians, the institution laid a strong foundation rooted in quality,
+                        values, and academic excellence.</div>
+                </li>
+                <li style="--accent-color:#E24A68" data-aos="zoom-in">
+                    <div class="date">2003</div>
+                    <div class="title">Centre of Spiritualism & Human Enrichment</div>
+                    <div class="descr">SMS Varanasi pioneered the integration of spiritual wisdom with management
+                        education by establishing the Centre of Spiritualism and Human Enrichment,
+                        blessed by Pt. Vishnu Kant Shashtri, former Governor of Uttar Pradesh.</div>
+                </li>
+                <li style="--accent-color:#1B5F8C" data-aos="fade-left">
+                    <div class="date">2010s</div>
+                    <div class="title">Research & Global Recognition</div>
+                    <div class="descr">The institution published four reputed bi-annual research journals indexed
+                        in Scopus, Elsevier, and UGC-approved lists, reinforcing its global academic
+                        footprint.</div>
+                </li>
+                <li style="--accent-color:#4CADAD" data-aos="fade-right">
+                    <div class="date">Present</div>
+                    <div class="title">NAAC ‘A’ Grade & Top 50 B-School</div>
+                    <div class="descr">With NAAC ‘A’ Grade accreditation, a lush green campus, strong placements,
+                        and programs aligned with Education 4.0 and NEP, SMS Varanasi stands among
+                        the Top 50 B-Schools in India.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- timeline end -->
+
+    <!-- our vision & mission -->
+    <div class="adma-about-area pt-20 pb-75">
+        <div class="container">
+            <div class="row align-items-center" data-cues="slideInUp">
+                <div class="col-lg-7">
+                    <div class="adma-about-content">
+                        <div class="title">
+                            <h2 class="d-flex align-items-center color-mehrron">
+
+                                SMS University
+                            </h2>
+                            <p>At SMS, we believe in providing an exceptional educational experienc that prepares
+                                students for success in an ever-changing world. As a leading institution of higher
+                                learning, </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="adma-about-card" data-aos="fade-right">
+                                    <h3 class="d-flex align-items-center color-blue ">
+                                        <img src="/public/images/icons/mission.png" alt="title-shape"
+                                            style="height: 20px;"> &nbsp;
+                                        Our Mission
+                                    </h3>
+                                    <p>To create excellent learning ambience through innovation in teaching, research
+                                        and consultancy for producing professionals capable of answering global
+                                        challenges and demonstrating high ethical and moral standards.</p>
+                                    <a class="text-decoration-none arrow-btn hoverBtn" href="university-overview.html">
+                                        University Overview
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="adma-about-card" data-aos="fade-left">
+                                    <h3 class="d-flex align-items-center color-blue">
+                                        <img src="/public/images/icons/earth-globe.png" alt="title-shape"
+                                            style="height: 20px;"> &nbsp;
+                                        Our Vision
+                                    </h3>
+                                    <p>To become a constantly growing center of excellence nurturing global-centric
+                                        professional leadership based on ethical and moral attributes, social
+                                        responsibility, and learning.</p>
+                                    <a class="text-decoration-none arrow-btn hoverBtn" href="program-details.html">
+                                        View Our Programs
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="adma-about-image text-end">
+                        <img src="/public/images/about-2.jpg" alt="about-image">
+
+                        <div class="shape-4">
+                            <img src="/public/images/shape-7.png" alt="shape-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our vision & mission end -->
+
+
+    <!-- Footer -->
+    <footer class="footer text-white pt-16 pb-8">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About Column -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="/public/images/icons/logoMain.png" alt=""
+                            style="width: 180px; background-color: white; padding: 4px;">
+                    </div>
+                    <p class="text-gray-400 mb-4">Where Ancient Wisdom Meets Modern Management. Transforming ambitious
+                        students into visionary leaders.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10  flex items-center justify-center transition-colors social-hover">
+                            <img src="public/images/shape/facebook.png" alt="Facebook" class="w-5 h-5">
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10  flex items-center justify-center transition-colors social-hover">
+                            <img src="public/images/shape/twitter.png" alt="Twitter" class="w-5 h-5">
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10  flex items-center justify-center transition-colors social-hover">
+                            <img src="public/images/shape/linkedin.png" alt="LinkedIn" class="w-5 h-5">
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10  flex items-center justify-center transition-colors social-hover">
+                            <img src="public/images/shape/instagram.png" alt="Instagram" class="w-5 h-5">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="text-deco-none">
+                    <h3 class="font-headline font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors ">About
+                                SMS</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors ">Programs</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors ">Admissions</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors ">Placements</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors ">Campus Life</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors ">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div class="text-deco-none">
+                    <h3 class="font-headline font-bold text-lg mb-6">Programs</h3>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-colors">MBA
+                                (Full-Time)</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors">PGDM</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors">Executive MBA</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors">Specializations</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors">International Programs</a>
+                        </li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-400 hover:text-accent transition-colors">Research Programs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="text-deco-none ">
+                    <h3 class="font-headline font-bold text-lg mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <img src="public/images/shape/maps-and-flags.png" alt="Location icon"
+                                class="w-5 h-5 mt-1 flex-shrink-0">
+                            <span class="text-gray-400">SMS Campus, Varanasi Road, Varanasi, Uttar Pradesh 221001</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <img src="public/images/shape/telephone.png" alt="Phone icon" class="w-5 h-5 flex-shrink-0">
+                            <span class="text-gray-400">+91 542 2345678</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <img src="public/images/shape/mail.png" alt="Email icon" class="w-5 h-5 flex-shrink-0">
+                            <span class="text-gray-400">admissions@smsvaranasi.ac.in</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <img src="public/images/shape/clock.png" alt="Clock icon" class="w-5 h-5 flex-shrink-0">
+                            <span class="text-gray-400">Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-sm">© 2025 SMS Varanasi. All Rights Reserved.</p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-colors">Privacy
+                            Policy</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-colors">Terms of
+                            Service</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-colors">Cookie
+                            Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky Header
+        const header = document.getElementById('mainHeader');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('[data-count]');
+        const speed = 200;
+
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => animateCounter(counter), 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    animateCounter(counter);
+                    observer.unobserve(counter);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const deadline = new Date('2025-02-28T23:59:59').getTime();
+            const now = new Date().getTime();
+            const distance = deadline - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdownTimer').innerHTML = '<div class="text-2xl font-bold">Admissions Closed</div>';
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.card, .reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(element => {
+            element.classList.add('reveal');
+            revealObserver.observe(element);
+        });
+
+        // Modal Functions
+        function openApplicationModal() {
+            document.getElementById('applicationModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeApplicationModal() {
+            document.getElementById('applicationModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openInquiryModal() {
+            document.getElementById('inquiryModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeInquiryModal() {
+            document.getElementById('inquiryModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openBrochureModal() {
+            document.getElementById('brochureModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBrochureModal() {
+            document.getElementById('brochureModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function scrollToVirtualTour() {
+            document.getElementById('virtualTour').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close modals on outside click
+        document.getElementById('applicationModal').addEventListener('click', (e) => {
+            if (e.target.id === 'applicationModal') closeApplicationModal();
+        });
+
+        document.getElementById('inquiryModal').addEventListener('click', (e) => {
+            if (e.target.id === 'inquiryModal') closeInquiryModal();
+        });
+
+        document.getElementById('brochureModal').addEventListener('click', (e) => {
+            if (e.target.id === 'brochureModal') closeBrochureModal();
+        });
+
+        // Form Submissions
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your interest! Our team will contact you shortly.');
+
+                // Close modals
+                closeApplicationModal();
+                closeInquiryModal();
+                closeBrochureModal();
+
+                // Reset form
+                form.reset();
+            });
+        });
+
+        // Smooth Scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: "ease-out-cubic",
+            once: true,   // animation sirf ek baar
+            offset: 120,
+        });
+    </script>
+
+</body>
+
+</html>
