@@ -2431,6 +2431,9 @@ Admission Area Style
 .color-blue {
   color: #012150 !important;
 }
+.bg-blue {
+  background: #012150 !important;
+}
 
 .color-yellow {
   color: #e7b447;
@@ -4854,10 +4857,36 @@ Events Area Style
 /* ===============================
    SUBMENU
 ================================ */
+/* ===============================
+   SUBMENU (ANIMATED)
+================================ */
 .mobile-submenu {
-  display: none;
-  padding: 10px 0 10px 14px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-left: 14px;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  transform: translateY(-6px);
 }
+
+.mobile-dropdown.open > .mobile-submenu {
+  max-height: 500px; /* enough height */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* arrow rotate */
+.mobile-arrow {
+  transition: transform 0.35s ease;
+}
+
+.mobile-dropdown.open .mobile-arrow {
+  transform: rotate(-135deg);
+}
+
 
 .mobile-submenu li {
   margin-bottom: 10px;
