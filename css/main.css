@@ -2447,6 +2447,7 @@ Admission Area Style
   background-color: #ad1f37;
   color: white;
 }
+
 .btn-2:hover {
   background-color: #ffffff;
   color: #ad1f37;
@@ -4423,4 +4424,490 @@ Events Area Style
   transform-style: preserve-3d;
   perspective: 1000px;
   transition: transform 0.2s ease;
+}
+
+
+
+/* ===============================
+   NAVBAR BASE
+================================ */
+
+.navbar_list {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.navbar_list li {
+  position: relative;
+  list-style: none;
+}
+
+/* ===============================
+   NAV LINK
+================================ */
+
+.navbar_list li>a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--rt-heading, #111);
+  transition: color 0.3s ease;
+}
+
+.navbar_list li>a:hover {
+  color: var(--rt-primary-2, #9a0000);
+}
+
+/* ===============================
+   ARROW (+ → − rotation)
+================================ */
+
+.navbar_list li.has-arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -12px;
+
+  width: 6px;
+  height: 6px;
+
+  border-left: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+
+  transform: translateY(-50%) rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+
+
+/* ===============================
+   SUBMENU CONTAINER (GLASS)
+================================ */
+
+.navbar_list ul.submenu {
+  position: absolute;
+  top:calc(100% + 14px);
+  left: 0;
+  min-width: 240px;
+
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  padding: 22px 0;
+  border-radius: 14px;
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px) scale(0.96);
+  transform-origin: top center;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  z-index: 999;
+}
+.navbar_list li.has-child {
+  position: relative;
+}
+.navbar_list li.has-child::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20px;   /* 👈 gap cover karega */
+}
+
+/* ===============================
+   SHOW ON HOVER
+================================ */
+
+.navbar_list li.has-child:hover>ul.submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  border-top: 2px solid #9a0000;
+}
+
+/* ===============================
+   SUBMENU ITEMS
+================================ */
+
+.navbar_list ul.submenu li {
+  padding: 0 6px;
+  margin-bottom: 14px;
+}
+
+.navbar_list ul.submenu li:last-child {
+  margin-bottom: 0;
+}
+
+.navbar_list ul.submenu li a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+  position: relative;
+  display: block;
+  padding: 6px;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.navbar_list ul.submenu li a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(154, 0, 0, 0.12),
+      rgba(154, 0, 0, 0.22));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s ease;
+  z-index: -1;
+  border-radius: 2px;
+}
+
+/* hover effect */
+.navbar_list ul.submenu li a:hover {
+  color: var(--rt-primary-2, #9a0000);
+}
+
+.navbar_list ul.submenu li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ===============================
+   STAGGER FEEL (subtle)
+================================ */
+
+.navbar_list li.has-child:hover ul.submenu li {
+  animation: fadeUp 0.45s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===============================
+   MOBILE SAFETY
+================================ */
+
+@media (max-width: 991px) {
+  .navbar_list ul.submenu {
+    display: none;
+  }
+}
+
+/* WRAPPER */
+/* ===============================
+   STICKY FAB WRAPPER
+================================ */
+
+/* .sticky-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  z-index: 9999;
+}
+
+
+.sticky-fab input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+} */
+
+/* ===============================
+   MAIN FAB BUTTON
+================================ */
+
+/* .fab {
+  width: 56px;
+  height: 56px;
+  background: #9a0000;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+
+.fab span {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.fab span:first-child {
+  transform: rotate(0deg);
+}
+
+.fab span:last-child {
+  transform: rotate(90deg);
+} */
+
+/* rotate on open */
+/* .sticky-fab input:checked + .fab {
+  transform: rotate(45deg);
+} */
+
+/* ===============================
+   ACTION BUTTONS
+================================ */
+
+/* .fab-actions {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+} */
+
+/* show actions */
+/* .sticky-fab input:checked ~ .fab-actions {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+} */
+
+/* ===============================
+   INDIVIDUAL ACTION BUTTON
+================================ */
+
+/* .fab-action {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fab-action:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+} */
+
+/* colors */
+/* .fab-action.whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.fab-action.call {
+  background: #0b5ed7;
+  color: #fff;
+} */
+
+/* ===============================
+   SIDEBAR WRAPPER
+================================ */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff;
+  z-index: 999;
+  transition: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  border-left: 3px solid #ad1f37; /* green accent */
+}
+
+/* ACTIVE */
+.mobile-sidebar.active {
+  left: 0;
+}
+
+/* ===============================
+   BRAND HEADER
+================================ */
+.mobile-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.brand-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* ===============================
+   CLOSE BUTTON
+================================ */
+.mobile-close {
+    background: #f0eeee;
+    padding: 8px 16px;
+    border-radius: 50%;
+  border: none;
+  color: #ad1f37;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-close:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  background: #ad1f37;
+  border-radius: 50%;
+}
+
+.brand-text {
+  color: #ad1f37;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+/* ===============================
+   NAV LIST
+================================ */
+.mobile-nav {
+  list-style: none;
+  padding: 10px 22px;
+}
+
+/* links */
+.mobile-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  color: #ad1f37;
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid #ad1f37;
+}
+
+/* ===============================
+   PLUS ICON (IMAGE STYLE)
+================================ */
+.mobile-arrow {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgb(236 236 236);
+  color: #ad1f37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-arrow::before {
+  content: "+";
+}
+
+/* rotate to minus */
+.mobile-dropdown.open .mobile-arrow {
+  transform: rotate(45deg);
+}
+
+/* ===============================
+   SUBMENU
+================================ */
+.mobile-submenu {
+  display: none;
+  padding: 10px 0 10px 14px;
+}
+
+.mobile-submenu li {
+  margin-bottom: 10px;
+}
+
+.mobile-submenu a {
+  font-size: 14px;
+  color: #ad1f37;
+  text-decoration: none;
+}
+
+/* open */
+.mobile-dropdown.open > .mobile-submenu {
+  display: block;
+  animation: mobileFade 0.3s ease;
+}
+
+@keyframes mobileFade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   CTA BUTTON
+================================ */
+.mobile-nav .btn {
+  margin-top: 14px;
+  border-radius: 999px;
+}
+
+/* ===============================
+   OVERLAY
+================================ */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 998;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
