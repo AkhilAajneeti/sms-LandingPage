@@ -2443,9 +2443,13 @@ Admission Area Style
   border-radius: 5px;
 }
 
-.btn-2:hover {
+.btn-2 {
   background-color: #ad1f37;
   color: white;
+}
+.btn-2:hover {
+  background-color: #ffffff;
+  color: #ad1f37;
 }
 
 .btn-2:hover img {
@@ -2583,7 +2587,7 @@ Choose Area Style
 
 .choose-image .choose-image-info {
   left: -60px;
-  bottom: 50px;
+  bottom: 30px;
   max-width: 510px;
   padding: 20px 30px;
   position: absolute;
@@ -4174,7 +4178,7 @@ Events Area Style
 
 .main-banner {
   position: relative;
-  margin-top: 80px;
+  margin-top: 60px;
   /* matches header total height */
 }
 
@@ -4373,15 +4377,15 @@ Events Area Style
   }
 
   .banner-content h1 {
-    font-size: 24px;
+    font-size: 50px;
   }
 
   .banner-content h1 span {
-    font-size: 26px;
+    font-size: 40px;
   }
 
   .banner-content p {
-    font-size: 13px;
+    font-size: 18px;
   }
 }
 
@@ -4413,4 +4417,10 @@ Events Area Style
 
 .icons ul li:hover img {
   transform: translateY(-8px) scale(1.05);
+}
+
+.cta {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.2s ease;
 }
