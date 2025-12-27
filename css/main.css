@@ -4940,3 +4940,6 @@ Events Area Style
   opacity: 1;
   visibility: visible;
 }
+.default-btn:hover{
+  background-color: maroon!important;
+}
