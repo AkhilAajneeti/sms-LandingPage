@@ -3741,12 +3741,12 @@ Events Area Style
 }
 @media(max-width:760px){
   .single-application-card .content h3 {
-  font-size: 20px;
+  font-size: 20px!important;
   margin-bottom: 15px;
 }
 .single-application-card.style-3 {
-    padding: 30px 22px;
-    margin-bottom: 25px;
+    padding: 30px 22px!important;
+    margin-bottom: 25px!important;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 }
@@ -3798,6 +3798,17 @@ Events Area Style
 
 .single-application-card.apply-pages {
   background-color: #f6f6f6;
+}
+
+.submenu-toggle{
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0!important;
+    color: #ad1f37;
+    font-size: 15px;
+    font-weight: normal!important;
+    border-bottom: none!important;
 }
 
 /*  */
@@ -4863,7 +4874,7 @@ Events Area Style
 
 
 .mobile-submenu li {
-  margin-bottom: 10px;
+  margin:6px 0px
 }
 
 .mobile-submenu a {
