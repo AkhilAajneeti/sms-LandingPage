@@ -4972,3 +4972,31 @@ Events Area Style
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
+/* base link */
+.mobilearrow a {
+  position: relative;                 /* 👈 IMPORTANT */
+  display: block;
+  padding-left: 22px;                 /* text already shifted */
+  transition: padding-left 0.4s ease-in-out;
+}
+
+/* arrow always visible on mobile */
+.mobilearrow a::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9a0000;
+  font-weight: bold;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* tap / active feedback */
+.mobilearrow a:active {
+  padding-left: 30px;                 /* thoda aur move */
+}
+
+.mobilearrow a:active::before {
+  transform: translateY(-50%) translateX(6px);
+}
