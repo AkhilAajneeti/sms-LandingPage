@@ -3739,6 +3739,17 @@ Events Area Style
   margin-right: 4px;
   color: maroon;
 }
+@media(max-width:760px){
+  .single-application-card .content h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.single-application-card.style-3 {
+    padding: 30px 22px;
+    margin-bottom: 25px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
 
 .single-application-card.style-3 {
   padding: 40px 28px;
@@ -4438,7 +4449,7 @@ Events Area Style
 .navbar_list {
   display: flex;
   align-items: center;
-  gap: 27px;
+  gap: 28px;
 }
 
 .navbar_list li {
@@ -4487,18 +4498,94 @@ Events Area Style
 /* ===============================
    SUBMENU CONTAINER (GLASS)
 ================================ */
+/* ============================
+   LEVEL 2 SUBMENU (DESKTOP)
+============================ */
+
+/* parent must be relative */
+.submenu-item {
+  position: relative;
+}
+
+/* hidden by default */
+/* ============================
+   LEVEL 2 SUBMENU (MOBILE)
+============================ */
+
+@media (max-width: 991px) {
+
+  /* first level submenu */
+  .navbar_list > li > ul.submenu {
+    display: none;
+  }
+
+  /* level 2 submenu controlled by JS */
+  .submenu--level2 {
+    position: static !important;
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    padding-left: 14px;
+  }
+
+  .submenu--level2.open {
+    display: block !important;
+  }
+}
+@media (max-width: 991px) {
+  .submenu-item:hover > .submenu--level2 {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: none !important;
+  }
+}
+
+
+.submenu--level2 {
+  position: absolute!important;
+  top: 0!important;
+  left: 100%!important;
+  width: max-content!important;
+  background: #fff!important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12)!important;
+  opacity: 0!important;
+  visibility: hidden!important;
+  transform: translateX(10px)!important;
+  transition: all 0.3s ease!important;
+  z-index: 999!important;
+}
+
+/* show on hover */
+.submenu-item:hover > .submenu--level2 {
+  opacity: 1!important;
+  visibility: visible!important;
+  transform: translateX(0)!important;
+}
+
+/* arrow indicator */
+/* prevent parent expanding */
+.submenu-item > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* arrow indicator */
+
 
 .navbar_list ul.submenu {
   position: absolute;
   top:calc(100% + 14px);
   left: 0;
-  min-width: 240px;
+  width: max-content;
 
   background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
-  padding: 22px 0;
+  padding: 22px 10px;
   border-radius: 14px;
 
   box-shadow:
@@ -4612,130 +4699,12 @@ Events Area Style
    MOBILE SAFETY
 ================================ */
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .navbar_list ul.submenu {
     display: none;
   }
 }
-
-/* WRAPPER */
-/* ===============================
-   STICKY FAB WRAPPER
-================================ */
-
-/* .sticky-fab {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 56px;
-  height: 56px;
-  z-index: 9999;
-}
-
-
-.sticky-fab input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-} */
-
-/* ===============================
-   MAIN FAB BUTTON
-================================ */
-
-/* .fab {
-  width: 56px;
-  height: 56px;
-  background: #9a0000;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-
-.fab span {
-  position: absolute;
-  width: 18px;
-  height: 2px;
-  background: #fff;
-  transition: transform 0.3s ease;
-}
-
-.fab span:first-child {
-  transform: rotate(0deg);
-}
-
-.fab span:last-child {
-  transform: rotate(90deg);
-} */
-
-/* rotate on open */
-/* .sticky-fab input:checked + .fab {
-  transform: rotate(45deg);
-} */
-
-/* ===============================
-   ACTION BUTTONS
-================================ */
-
-/* .fab-actions {
-  position: absolute;
-  bottom: 70px;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-  transition: all 0.3s ease;
-} */
-
-/* show actions */
-/* .sticky-fab input:checked ~ .fab-actions {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-} */
-
-/* ===============================
-   INDIVIDUAL ACTION BUTTON
-================================ */
-
-/* .fab-action {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: #fff;
-  color: #333;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.fab-action:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
-} */
-
-/* colors */
-/* .fab-action.whatsapp {
-  background: #25d366;
-  color: #fff;
-}
-
-.fab-action.call {
-  background: #0b5ed7;
-  color: #fff;
-} */
+ */
 
 /* ===============================
    SIDEBAR WRAPPER
@@ -4849,9 +4818,14 @@ Events Area Style
   content: "+";
 }
 
-/* rotate to minus */
-.mobile-dropdown.open .mobile-arrow {
-  transform: rotate(45deg);
+/* default arrow */
+.mobile-arrow {
+  transition: transform 0.35s ease;
+}
+
+/* rotate ONLY the arrow inside the opened dropdown */
+.mobile-dropdown.open > .mobile-link .mobile-arrow {
+  transform: rotate(-135deg);
 }
 
 /* ===============================
@@ -4883,9 +4857,9 @@ Events Area Style
   transition: transform 0.35s ease;
 }
 
-.mobile-dropdown.open .mobile-arrow {
+/* .mobile-dropdown.open .mobile-arrow {
   transform: rotate(-135deg);
-}
+} */
 
 
 .mobile-submenu li {
@@ -4943,3 +4917,4 @@ Events Area Style
 .default-btn:hover{
   background-color: maroon!important;
 }
+
