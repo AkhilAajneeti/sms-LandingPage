@@ -5118,10 +5118,10 @@ Events Area Style
   text-decoration: none;
 }
 
-@media (max-width:667px) {
+@media (max-width:668px) {
   .main-banner {
     position: relative;
-    margin-top: 140px !important;
+    margin-top: 160px !important;
   }
 
   .header__info ul li {
