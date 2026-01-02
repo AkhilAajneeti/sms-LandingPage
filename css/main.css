@@ -4403,7 +4403,7 @@ Events Area Style
 
 @media (max-width: 480px) {
   .banner-content {
-    top: 55%;
+    top: 58%;
   }
 
   .banner-content h1 {
@@ -5137,6 +5137,9 @@ Events Area Style
     border-right: 1px solid white;
     padding-right: 5px!important;
   }
+      .header__info ul {
+        margin: 0px!important;
+    }
 }
 
 @media (max-width:780px) {
