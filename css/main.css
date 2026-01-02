@@ -4161,7 +4161,7 @@ Events Area Style
 }
 
 .header__info ul {
-  margin: 8px 0px;
+  margin: 2px 0px;
 }
 
 .header__info ul li {
@@ -4177,7 +4177,7 @@ Events Area Style
 .header__info ul li a {
   text-decoration: none !important;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 12px!important;
 }
 
 .header__info ul li a:hover {
@@ -4205,6 +4205,10 @@ Events Area Style
     margin 0.35s ease;
 }
 
+.centernavbar p{
+  font-size: 14px;
+}
+
 .main-banner {
   position: relative;
   margin-top: 60px;
@@ -4214,7 +4218,7 @@ Events Area Style
 @media (max-width:780px) {
   .main-banner {
     position: relative;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 
