@@ -5121,7 +5121,7 @@ Events Area Style
 @media (max-width:667px) {
   .main-banner {
     position: relative;
-    margin-top: 120px !important;
+    margin-top: 140px !important;
   }
 
   .header__info ul li {
@@ -5148,10 +5148,7 @@ Events Area Style
   .header__info ul {
     margin: 2px 0px;
   }
-}
-
-@media (max-width:760px) {
-  .header__info ul {
+   .header__info ul {
     padding-left: 0px;
     display: flex;
     align-items: baseline;
@@ -5164,4 +5161,7 @@ Events Area Style
     display: inline-block;
     margin-right: 10px;
   }
+  .centernavbar p {
+  font-size: 12px !important;
+}
 }
