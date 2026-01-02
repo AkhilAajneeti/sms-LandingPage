@@ -4221,6 +4221,12 @@ Events Area Style
     margin-top: 100px!important;
   }
 }
+@media (max-width:667px) {
+  .main-banner {
+    position: relative;
+    margin-top: 120px!important;
+  }
+}
 
 /* 🔥 Overlay */
 .banner-overlay {
