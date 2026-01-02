@@ -4217,21 +4217,7 @@ Events Area Style
   /* matches header total height */
 }
 
-@media (max-width:780px) {
-  .main-banner {
-    position: relative;
-    margin-top: 100px!important;
-  }
-  .header__info ul {
-    margin: 2px 0px;
-}
-}
-@media (max-width:667px) {
-  .main-banner {
-    position: relative;
-    margin-top: 120px!important;
-  }
-}
+
 
 /* 🔥 Overlay */
 .banner-overlay {
@@ -5131,7 +5117,33 @@ Events Area Style
   border: none;
   text-decoration: none;
 }
-
+@media (max-width:667px) {
+  .main-banner {
+    position: relative;
+    margin-top: 120px!important;
+  }
+      .header__info ul li {
+        list-style: none !important;
+        display: inline-block;
+        margin-right: 7px;
+    }
+    .header__info ul li a {
+    text-decoration: none !important;
+    color: #ffffff;
+    font-size: 12px !important;
+    border-right: 1px solid white;
+    padding-right: 5px;
+}
+}
+@media (max-width:780px) {
+  .main-banner {
+    position: relative;
+    margin-top: 100px!important;
+  }
+  .header__info ul {
+    margin: 2px 0px;
+}
+}
 
 @media (max-width:760px) {
   .header__info ul {
