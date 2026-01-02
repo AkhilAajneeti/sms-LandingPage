@@ -4402,7 +4402,7 @@ Events Area Style
 
 @media (max-width: 480px) {
   .banner-content {
-    top: 50%;
+    top: 55%;
   }
 
   .banner-content h1 {
@@ -5121,6 +5121,10 @@ Events Area Style
 @media (max-width:760px) {
   .header__info ul {
     padding-left: 0px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .header__info ul li {
