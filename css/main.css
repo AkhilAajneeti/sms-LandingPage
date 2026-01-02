@@ -4161,7 +4161,7 @@ Events Area Style
 }
 
 .header__info ul {
-  margin: 2px 0px;
+  margin: 8px 0px;
 }
 
 .header__info ul li {
@@ -4178,6 +4178,8 @@ Events Area Style
   text-decoration: none !important;
   color: #ffffff;
   font-size: 12px!important;
+      border-right: 1px solid white;
+    padding-right: 10px;
 }
 
 .header__info ul li a:hover {
@@ -4220,6 +4222,9 @@ Events Area Style
     position: relative;
     margin-top: 100px!important;
   }
+  .header__info ul {
+    margin: 2px 0px;
+}
 }
 @media (max-width:667px) {
   .main-banner {
