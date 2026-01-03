@@ -173,6 +173,7 @@ body {
   margin: 0;
   /* 1 */
   line-height: inherit;
+ font-family: "Segoe UI", Arial, sans-serif;
   /* 2 */
 }
 
@@ -212,6 +213,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
+  font-family: "Segoe UI", Arial, sans-serif !important;
 }
 
 /*
@@ -4167,7 +4169,7 @@ Events Area Style
 .header__info ul li {
   list-style: none !important;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 19px;
 }
 
 .header__info ul li:last-child {
@@ -4180,6 +4182,8 @@ Events Area Style
   font-size: 12px !important;
   border-right: 1px solid white;
   padding-right: 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 
 .header__info ul li a:hover {
@@ -4209,6 +4213,9 @@ Events Area Style
 
 .centernavbar p {
   font-size: 14px;
+  font-weight: bold!important;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
 }
 
 .main-banner {
@@ -4365,6 +4372,7 @@ Events Area Style
   text-align: center;
   pointer-events: auto;
   width: 75%;
+  font-family: "Roboto", sans-serif;
 }
 
 
@@ -4413,7 +4421,7 @@ Events Area Style
 .navbar_list {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
 }
 
 .navbar_list li {
@@ -4431,6 +4439,7 @@ Events Area Style
   font-weight: 600;
   color: var(--rt-heading, #111);
   transition: color 0.3s ease;
+  font-family: "Raleway", sans-serif;
 }
 
 .navbar_list li>a:hover {
@@ -5077,7 +5086,8 @@ Events Area Style
   .header__info ul {
     margin: 2px 0px;
   }
-   .header__info ul {
+
+  .header__info ul {
     padding-left: 0px;
     display: flex;
     align-items: baseline;
@@ -5090,12 +5100,13 @@ Events Area Style
     display: inline-block;
     margin-right: 10px;
   }
+
   .centernavbar p {
-  font-size: 12px !important;
+    font-size: 12px !important;
 
-}
+  }
 
- .banner-content {
+  .banner-content {
     color: aliceblue;
     position: absolute;
     top: 50%;
@@ -5113,6 +5124,7 @@ Events Area Style
   .banner-content h1 {
     font-size: 28px;
     line-height: 1.2;
+    font-family: "Roboto", sans-serif;
   }
 
   .banner-content h1 span {
@@ -5125,6 +5137,7 @@ Events Area Style
     font-size: 14px;
     line-height: 1.5;
     margin-top: 10px;
+    font-family: "Roboto", sans-serif;
   }
 }
 
@@ -5144,7 +5157,8 @@ Events Area Style
   .banner-content p {
     font-size: 18px;
   }
-   .main-banner {
+
+  .main-banner {
     position: relative;
     margin-top: 150px !important;
   }
@@ -5160,9 +5174,15 @@ Events Area Style
     color: #ffffff;
     font-size: 12px !important;
     border-right: 1px solid white;
-    padding-right: 5px!important;
+    padding-right: 5px !important;
   }
-      .header__info ul {
-        margin: 0px!important;
-    }
+
+  .header__info ul {
+    margin: 0px !important;
+  }
+}
+
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
 }
