@@ -3664,6 +3664,9 @@ Events Area Style
 .single-events-card.pages-style:hover {
   background-color: #ad1f37;
 }
+.single-events-card.pages-style:hover .content .date {
+    color: white;
+}
 
 .from-secondary-900\/80 {
   --tw-gradient-from: rgb(0 0 0 / 80%) var(--tw-gradient-from-position);
@@ -5185,4 +5188,16 @@ Events Area Style
 
 .font-roboto {
   font-family: "Roboto", sans-serif;
+}
+
+/* safari */
+/* Remove underline from phone numbers in Safari */
+a[href^="tel"] {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+@supports (-webkit-touch-callout: none) {
+  p {
+    -webkit-text-decoration: none;
+  }
 }
