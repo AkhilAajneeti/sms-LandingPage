@@ -5537,11 +5537,11 @@ a[href^="tel"] {
   fill: var(--tp-common-white);
 }
 
-@media (max-width: 575px) {
+/* @media (max-width: 575px) {
   .course__tab-2 .nav-tabs .nav-item .nav-link i {
     display: none;
   }
-}
+} */
 
 .course__tab-2 .nav-tabs .nav-item .nav-link svg {
   width: 14px;
