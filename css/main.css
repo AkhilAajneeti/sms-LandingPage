@@ -6201,7 +6201,7 @@ tbody tr:hover {
 @media (max-width: 768px) {
   .faculty-card,
   .faculty-card.reverse {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 20px;
   }
 
