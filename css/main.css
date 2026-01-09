@@ -2723,6 +2723,11 @@ Page Banner Area Style
   background-color: white;
 }
 
+/* //new update  */
+.directmsg.pages-banner-area::after {
+  display: none;
+}
+
 .pages-title {
   margin-top: 50px;
 }
@@ -5861,7 +5866,8 @@ tbody tr:hover {
 @media (max-width: 500px) {
   .course__tab-2 .nav-tabs .nav-item:not(:last-child) .nav-link {
     border-bottom: 2px solid #d2d3dc;
-}
+  }
+
   .pages-title {
     margin-top: 90px;
   }
@@ -5890,19 +5896,303 @@ tbody tr:hover {
   .course__area p {
     text-align: justify !important;
   }
+
   .course__instructor h3 {
     font-size: 30px;
+  }
+
+  .table-responsive th {
+    font-size: 12px !important;
+  }
+
+  .table-responsive td {
+    font-size: 14px !important;
+  }
+
+  .course__related .section__title {
+    font-size: 18px;
+  }
+
+  .course__content-2 {
+    padding: 0px 15px 15px;
+  }
+
+  .directmsg h2 {
+    font-size: 35px;
+  }
+
+  .directPageTitle {
+    margin-bottom: 50px!important;
+  }
+  .directorSpeak p{
+    text-align: justify!important;
+  }
 }
-.table-responsive th{
-    font-size: 12px!important;
+
+/* directPageTitle */
+.directPageTitle {
+  margin-bottom: 120px;
+  text-align: center;
 }
-.table-responsive td{
-    font-size: 14px!important;
+
+.heading {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
 }
-.course__related .section__title{
-  font-size: 18px;
+
+.left-pattern {
+  position: relative;
 }
-.course__content-2 {
-  padding: 0px 15px 15px;
+
+.left-pattern::before {
+  background-image: url(../public/images/shape/self-pattern.svg);
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-position: top right;
+  background-repeat: no-repeat;
+  height: 550px;
+  width: 400px;
+  background-size: cover;
+  z-index: 0;
 }
+.editImage{
+  border-radius: 10px;
+    filter: brightness(0.96);
+}
+/* team cards */
+.team-card-items {
+  margin-top: 25px;
+  position: relative;
+  z-index: 9;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.team-card-items::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  border-radius: 14px;
+  background: linear-gradient(329deg, #9a0019, #000000 90%);
+  transition: all 0.35s ease-in-out;
+  z-index: -1;
+}
+
+@media (max-width: 575px) {
+  .team-card-items::before {
+    height: 60%;
+  }
+}
+
+.team-card-items .team-image img {
+  width: 100%;
+  height: 245px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.team-card-items .team-content {
+  margin-top: 30px;
+}
+
+.team-card-items .team-content a:hover h3,
+.team-card-items .team-content a:hover p {
+  color: wheat;
+}
+
+.team-card-items .team-content p{
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 0;
+}
+
+.team-card-items .team-content h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.team-card-items .team-content .social-icon {
+  margin-top: 20px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card-items .team-content .social-icon a {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #2A2A2A;
+  color: white;
+}
+
+.team-card-items .team-content .social-icon a:hover {
+  background-color: var(--theme);
+  color: #000;
+}
+
+.team-card-items:hover::before {
+  height: 100%;
+  background-color: #1D1D1D;
+}
+
+.team-card-items.active::before {
+  height: 100%;
+  background-color: #1D1D1D;
+}
+
+/*  */
+.team-card-items .team-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* Overlay that appears on hover */
+/* .team-card-items .team-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  border-radius: 14px;
+} */
+
+/* h3 hidden initially */
+.team-card-items .team-image h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+  z-index: 99;
+}
+
+/* Hover effect */
+.team-card-items:hover .team-image::after,
+.team-card-items:hover .team-image h3 {
+  opacity: 1;
+}
+ .placementTeacher p {
+    text-align: justify;
+    margin-bottom: 8px;
+  }
+.Image {
+  transition: transform 0.4s ease;
+}
+
+.faculty:hover .Image img {
+  filter: brightness(0.9);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease;
+}
+
+.underlineHover {
+  position: relative;
+  display: inline-block;
+  /* important for correct width */
+}
+
+.underlineHover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  /* underline spans full text width */
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease;
+  /* optional for hover animation */
+}
+
+/* Optional hover animation effect */
+.faculty-content:hover .underlineHover::after {
+  width: 30%;
+  left: 0%;
+}
+
+
+/*  */
+/* MAIN CARD */
+.traningpage.pages-banner-area::after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    z-index: -1;
+    content: "";
+    position: absolute;
+   background-image: url('/public/images/hiringDrivesBg.svg');
+}
+.faculty-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 40px;
+  /* background: rgba(255,255,255,0.9); */
+  border-radius: 16px;
+  /* box-shadow: 0 10px 30px rgba(0,0,0,0.08); */
+}
+
+/* REVERSE LAYOUT */
+.faculty-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* CONTENT */
+.faculty-content {
+  flex: 1;
+}
+
+.faculty-content p {
+  line-height: 1.7;
+  color: #444;
+}
+
+/* 🔥 IMAGE FIX – SAME SIZE ALWAYS */
+.faculty-image {
+  width: 280px;
+  height: 340px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.faculty-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* MOST IMPORTANT */
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .faculty-card,
+  .faculty-card.reverse {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .faculty-image {
+    width: 100%;
+    height: 300px;
+  }
 }
