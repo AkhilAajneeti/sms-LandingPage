@@ -6153,7 +6153,7 @@ tbody tr:hover {
     z-index: -1;
     content: "";
     position: absolute;
-   background-image: url('public/images/hiringDrivesBg.svg');
+   background-image: url('../public/images/hiringDrivesBg.svg')!important;
 }
 .faculty-card {
   display: flex;
