@@ -5873,8 +5873,9 @@ tbody tr:hover {
   }
 
   .pages-title h2 {
-    font-size: 45px;
+    font-size: 34px;
     margin-bottom: 18px;
+    text-align: center;
   }
 
   .programAbout {
@@ -5927,6 +5928,19 @@ tbody tr:hover {
   .directorSpeak p{
     text-align: justify!important;
   }
+  .left-pattern::before {
+    background-image: url(../public/images/shape/self-pattern.svg);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 100%!important;
+    background-size: cover;
+    z-index: 0;
+}
 }
 
 /* directPageTitle */
