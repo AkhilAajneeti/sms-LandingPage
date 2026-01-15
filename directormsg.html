@@ -110,7 +110,7 @@
                             </a>
 
                             <ul class="submenu sub__style">
-                                <li><a href="academic.html">Vision & Mission</a></li>
+                                <li><a href="Vision & Mission">Vision & Mission</a></li>
                                 <li><a href="admission.html">Director Speaks</a></li>
                                 <li><a href="academic-area.html">The Journey</a></li>
                                 <!-- level 2 -->
@@ -303,7 +303,7 @@
                             <span class="mobile-arrow"></span>
                         </div>
                         <ul class="mobile-submenu">
-                            <li><a href="academic.html">Vision & Mission</a></li>
+                            <li><a href="Vision & Mission">Vision & Mission</a></li>
                             <li><a href="admission.html">Director Speaks</a></li>
                             <li><a href="academic-area.html">The Journey</a></li>
                             <li class="mobile-dropdown">
@@ -819,178 +819,8 @@
         </div>
     </footer>
 
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-
-            /* ===============================
-               HEADER SHADOW ON SCROLL
-            =============================== */
-            const header = document.getElementById('mainHeader');
-
-            if (header) {
-                window.addEventListener('scroll', () => {
-                    if (window.pageYOffset > 100) {
-                        header.classList.add('shadow-lg');
-                    } else {
-                        header.classList.remove('shadow-lg');
-                    }
-                });
-            }
-
-            /* ===============================
-               COUNTER ANIMATION
-            =============================== */
-            const counters = document.querySelectorAll('[data-count]');
-            const speed = 200;
-
-            if (counters.length) {
-                const animateCounter = (counter) => {
-                    const target = +counter.getAttribute('data-count');
-                    const count = +counter.innerText;
-                    const increment = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(() => animateCounter(counter), 1);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            animateCounter(entry.target);
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-
-                counters.forEach(counter => observer.observe(counter));
-            }
-
-            /* ===============================
-               COUNTDOWN TIMER (SAFE)
-            =============================== */
-            const daysEl = document.getElementById('days');
-            const hoursEl = document.getElementById('hours');
-            const minutesEl = document.getElementById('minutes');
-            const secondsEl = document.getElementById('seconds');
-            const countdownTimer = document.getElementById('countdownTimer');
-
-            if (daysEl && hoursEl && minutesEl && secondsEl) {
-                function updateCountdown() {
-                    const deadline = new Date('2025-02-28T23:59:59').getTime();
-                    const now = Date.now();
-                    const distance = deadline - now;
-
-                    if (distance <= 0) {
-                        clearInterval(countdownInterval);
-                        if (countdownTimer) {
-                            countdownTimer.innerHTML =
-                                '<div class="text-2xl font-bold">Admissions Closed</div>';
-                        }
-                        return;
-                    }
-
-                    daysEl.innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    hoursEl.innerText = Math.floor((distance / (1000 * 60 * 60)) % 24);
-                    minutesEl.innerText = Math.floor((distance / (1000 * 60)) % 60);
-                    secondsEl.innerText = Math.floor((distance / 1000) % 60);
-                }
-
-                const countdownInterval = setInterval(updateCountdown, 1000);
-                updateCountdown();
-            }
-
-            /* ===============================
-               SCROLL REVEAL
-            =============================== */
-            const revealElements = document.querySelectorAll('.card, .reveal');
-
-            if (revealElements.length) {
-                const revealObserver = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            revealObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-                revealElements.forEach(el => {
-                    el.classList.add('reveal');
-                    revealObserver.observe(el);
-                });
-            }
-
-            /* ===============================
-               MODAL HELPERS (SAFE)
-            =============================== */
-            function openModal(id) {
-                const modal = document.getElementById(id);
-                if (!modal) return;
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeModal(id) {
-                const modal = document.getElementById(id);
-                if (!modal) return;
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-
-            window.openApplicationModal = () => openModal('applicationModal');
-            window.closeApplicationModal = () => closeModal('applicationModal');
-            window.openInquiryModal = () => openModal('inquiryModal');
-            window.closeInquiryModal = () => closeModal('inquiryModal');
-            window.openBrochureModal = () => openModal('brochureModal');
-            window.closeBrochureModal = () => closeModal('brochureModal');
-
-            ['applicationModal', 'inquiryModal', 'brochureModal'].forEach(id => {
-                const modal = document.getElementById(id);
-                if (modal) {
-                    modal.addEventListener('click', e => {
-                        if (e.target.id === id) closeModal(id);
-                    });
-                }
-            });
-
-            /* ===============================
-               FORM SUBMIT
-            =============================== */
-            document.querySelectorAll('form').forEach(form => {
-                form.addEventListener('submit', e => {
-                    e.preventDefault();
-                    alert('Thank you for your interest! Our team will contact you shortly.');
-                    form.reset();
-                    closeModal('applicationModal');
-                    closeModal('inquiryModal');
-                    closeModal('brochureModal');
-                });
-            });
-
-            /* ===============================
-               SMOOTH SCROLL
-            =============================== */
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', e => {
-                    const target = document.querySelector(anchor.getAttribute('href'));
-                    if (!target) return;
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-            });
-
-        });
-    </script>
-
-
-
     <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <!-- Swiper JS -->
@@ -1001,139 +831,9 @@
         crossorigin="anonymous"></script>
     <!-- Initialize Swiper -->
 
-    <script>
-        const headerBorder = document.querySelector(".header__border");
-        const centerNavbar = document.querySelector(".centernavbar");
-
-        let lastScrollY = window.scrollY;
-
-        // store original heights
-        const headerBorderHeight = headerBorder.offsetHeight;
-        const centerNavbarHeight = centerNavbar.offsetHeight;
-
-        window.addEventListener("scroll", () => {
-            const currentScroll = window.scrollY;
-
-            if (currentScroll > lastScrollY && currentScroll > 80) {
-                // 🔽 scroll DOWN → hide + remove space
-                headerBorder.style.transform = "translateY(-100%)";
-                headerBorder.style.opacity = "0";
-                headerBorder.style.height = "0";
-                headerBorder.style.padding = "0";
-                headerBorder.style.margin = "0";
-
-                centerNavbar.style.transform = "translateY(-100%)";
-                centerNavbar.style.opacity = "0";
-                centerNavbar.style.height = "0";
-                centerNavbar.style.padding = "0";
-                centerNavbar.style.margin = "0";
-            } else {
-                // 🔼 scroll UP → restore
-                headerBorder.style.transform = "translateY(0)";
-                headerBorder.style.opacity = "1";
-                headerBorder.style.height = headerBorderHeight + "px";
-
-                centerNavbar.style.transform = "translateY(0)";
-                centerNavbar.style.opacity = "1";
-                centerNavbar.style.height = centerNavbarHeight + "px";
-            }
-
-            lastScrollY = currentScroll;
-        });
-    </script>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 900,        // animation speed
-            easing: 'ease-out-cubic',
-            once: true,           // ek hi baar animate
-            offset: 120           // scroll se pehle trigger
-        });
-    </script>
 
-
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-
-            const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-            const mobileMenu = document.getElementById("mobileMenu");
-            const mobileOverlay = document.getElementById("mobileOverlay");
-            const mobileCloseBtn = document.getElementById("mobileCloseBtn");
-
-            function openMenu() {
-                mobileMenu.classList.add("active");
-                mobileOverlay.classList.add("active");
-            }
-
-            function closeMenu() {
-                mobileMenu.classList.remove("active");
-                mobileOverlay.classList.remove("active");
-
-                // close all dropdowns when sidebar closes
-                document
-                    .querySelectorAll(".mobile-dropdown.open")
-                    .forEach(item => item.classList.remove("open"));
-            }
-
-            mobileMenuBtn?.addEventListener("click", openMenu);
-            mobileOverlay?.addEventListener("click", closeMenu);
-            mobileCloseBtn?.addEventListener("click", closeMenu);
-
-            /* ===============================
-               ACCORDION SUBMENU LOGIC (FIXED)
-            =============================== */
-            document.querySelectorAll(".mobile-toggle").forEach(toggle => {
-                toggle.addEventListener("click", (e) => {
-                    e.stopPropagation();
-
-                    const currentItem = toggle.closest(".mobile-dropdown");
-                    if (!currentItem) return;
-
-                    // ✅ close ONLY same-level siblings
-                    const siblings = currentItem.parentElement.querySelectorAll(
-                        ":scope > .mobile-dropdown.open"
-                    );
-
-                    siblings.forEach(item => {
-                        if (item !== currentItem) {
-                            item.classList.remove("open");
-                        }
-                    });
-
-                    // toggle current
-                    currentItem.classList.toggle("open");
-                });
-            });
-
-        });
-    </script>
-
-
-    <script>
-        document.querySelectorAll('.submenu-item > a').forEach(link => {
-            link.addEventListener('click', function (e) {
-
-                // ONLY handle desktop submenu on small screens
-                if (window.innerWidth <= 991) {
-                    e.preventDefault();
-
-                    const submenu = this.nextElementSibling;
-                    if (!submenu || !submenu.classList.contains('submenu--level2')) return;
-
-                    // close other desktop level-2 submenus
-                    document.querySelectorAll('.submenu--level2.open').forEach(menu => {
-                        if (menu !== submenu) menu.classList.remove('open');
-                    });
-
-                    submenu.classList.toggle('open');
-                }
-
-            });
-        });
-    </script>
 
 </body>
 

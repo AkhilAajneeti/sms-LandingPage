@@ -262,6 +262,42 @@
       },
     },
   });
+
+  // green audit-->scope of work
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".greenAudit_slider", {
+      loop: true,
+      spaceBetween: 30,
+      speed: 800, // same as smartSpeed
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      slidesPerView: 1,
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  });
 })(jQuery);
 AOS.init({
   duration: 900, // animation speed
