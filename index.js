@@ -263,6 +263,27 @@
     },
   });
 
+    var swiper = new Swiper(".book__slider", {
+    spaceBetween: 30,
+    slidesPerView: 2,
+    loop: true,
+    speed: 2000,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+  });
+
   // green audit-->scope of work
   document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".greenAudit_slider", {
