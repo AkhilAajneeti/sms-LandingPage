@@ -2696,7 +2696,7 @@ Choose Area Style
 Page Banner Area Style
 =================================================*/
 .pages-banner-area {
-  z-index: 1;
+  z-index: 2;
   position: relative;
   padding-top: 250px;
   background-size: cover;
@@ -7441,6 +7441,11 @@ thead tr:first-child th:last-child {
   color: maroon;
 }
 
+.about-varanasi p {
+  font-size: 16px;
+  text-align: justify;
+}
+
 .Outreach {
   position: relative;
   overflow: hidden;
@@ -8462,6 +8467,7 @@ h6 {
   /* white-space: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
+  color: black;
 }
 
 .item-details p:not(.author) {
@@ -8548,4 +8554,348 @@ h6 {
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+
+.item-details .button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  background: linear-gradient(329deg, #012150, #000000 100%);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.item-details .button:hover {
+  background: linear-gradient(329deg, #ad1f37, #000000 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about__image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 350px !important;
+  object-fit: cover;
+}
+
+.architecturalContent .content-item:nth-of-type(1) ul li {
+  list-style: circle;
+}
+
+/* faculty campus */
+.facilityCampup {
+  position: relative;
+  z-index: 1;
+  /* ensure content stays above the circle */
+}
+
+.facilityCampup::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border: 120px solid transparent;
+  border-bottom-color: rgba(239, 125, 0, 0.08);
+  border-right-color: rgba(239, 125, 0, 0.08);
+  border-radius: 50%;
+  top: -300px;
+  left: -300px;
+  z-index: -1;
+  /* keeps it behind the main content */
+}
+
+.shadow-1 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.facilityOne {
+  display: flex;
+  align-items: center;
+}
+
+.facilityOne .content,
+.facilityOne img {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.facilityOne img {
+  object-fit: cover;
+  height: 384px;
+}
+
+@media (max-width: 576px) {
+
+  .facilityOne .content,
+  .facilityOne img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.ComputerCenter .extra p span {
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: #fff;
+}
+
+.ComputerCenter .extra {
+  padding: 35px 20px;
+  background-color: #8c0017;
+  border-radius: 10px;
+}
+
+.ComputerCenter .extra p {
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.mediaLabs h1 {
+  text-align: center;
+}
+
+.mediaLabs a img {
+  border-radius: 0px;
+  box-shadow: none;
+  width: 15px;
+  height: 15px;
+}
+
+.mediaLabs {
+  position: relative;
+}
+
+.puzzel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  opacity: 0.8;
+  transform: rotate(22deg);
+  animation: floatPuzzle 4s ease-in-out infinite;
+  transform-origin: center;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+@keyframes floatPuzzle {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(20deg) translateY(0);
+  }
+
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+.relatedLinks a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.LibraryPortal {
+  padding: 40px 0px;
+
+}
+
+.LibraryPortal h2,
+.LibraryPortal p {
+  text-align: center;
+}
+
+.LibraryPortal ul {
+  list-style: none;
+  z-index: inherit;
+}
+
+.LibraryPortal ul li {
+  font-size: 15px;
+}
+
+.LibraryPortal .card {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.LibraryPortal .card img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.4;
+  transition: all 0.6s ease-in-out;
+  /* add smooth animation */
+}
+
+.LibraryPortal .card:hover img {
+  right: 20px;
+}
+
+.subscriptions ul li a:hover {
+  color: maroon;
+}
+
+.ns-management-area {
+  overflow: hidden;
+  margin: 50px 0px;
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1799px),
+only screen and (min-width: 1400px) and (max-width: 1599px),
+only screen and (min-width: 1200px) and (max-width: 1399px),
+only screen and (min-width: 992px) and (max-width: 1199px),
+only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .ns-management-area.pb-80 {
+    padding-bottom: 15px;
+  }
+}
+
+.ns-management-bg {
+  position: absolute;
+  /* right: 250px; */
+  top: 0;
+  z-index: -1;
+  height: 100%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ns-management-bg {
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .ns-management-bg {
+    right: 0;
+  }
+}
+
+.ns-management-img {
+  position: absolute;
+  right: 0;
+  top: 180px;
+  border: 10px solid #fff;
+  border-right: 0;
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1799px),
+only screen and (min-width: 1400px) and (max-width: 1599px),
+only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .ns-management-img {
+    width: 44.8%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .ns-management-img {
+    display: none;
+  }
+}
+
+.ns-section-title {
+  color: #fff;
+}
+
+.ns-section,
+.ns-section h2 {
+  color: white;
+}
+
+/*  */
+.ns-management-content-info h5 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.ns-management-content-info p {
+  margin-bottom: 0;
+  color: #fff;
+}
+.ns-management-content ul li {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 25px;
+}
+
+.ns-management-content ul li:last-child {
+  padding-bottom: 0;
+}
+
+.ns-management-content ul li:last-child::after {
+  position: absolute;
+  left: 5px;
+  bottom: -5px;
+  content: "";
+  background-image: url("../img/management/arrow.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 14px;
+  height: 18px;
+  z-index: 9;
+}
+
+.ns-management-content ul li::before {
+  position: absolute;
+  content: "";
+  left: 11px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #848484;
+  z-index: -1;
+}
+
+.ns-management-content-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  background-color: #ffab17;
+  border-radius: 50%;
+  line-height: 25px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+.ns-management-content .DigitalHarbour {
+    color: #fff;
+    padding-top: 15px;
+    text-align: justify;
+}
+
+.subscriptions ul li a {
+  text-decoration: none!important;
+  color: black;
+}
+
+.LibraryPortal .card {
+    position: relative;
+    z-index: 2;
+    background-color: aliceblue;
+    padding: 20px;
+}
+.LibraryPortal ul li {
+    font-size: 15px;
 }
