@@ -84,7 +84,7 @@
 
         // ✅ close ONLY same-level siblings
         const siblings = currentItem.parentElement.querySelectorAll(
-          ":scope > .mobile-dropdown.open"
+          ":scope > .mobile-dropdown.open",
         );
 
         siblings.forEach((item) => {
@@ -163,7 +163,7 @@
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.5 },
       );
 
       counters.forEach((counter) => observer.observe(counter));
@@ -218,7 +218,7 @@
             }
           });
         },
-        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
       );
 
       revealElements.forEach((el) => {
@@ -242,6 +242,72 @@
 
   // swiper's
 
+  document.addEventListener("DOMContentLoaded", function () {
+    var swipers = document.querySelectorAll(".mySwiper");
+
+    swipers.forEach(function (container, index) {
+      new Swiper(container, {
+        loop: true,
+        spaceBetween: 30,
+        speed: 6000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: index === 0,
+        },
+        breakpoints: {
+          0: { slidesPerView: 2 },
+          480: { slidesPerView: 3 },
+          780: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
+        },
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var swipers = document.querySelectorAll(".TrustSwiper");
+
+    swipers.forEach(function (container, index) {
+      new Swiper(container, {
+        loop: true,
+        spaceBetween: 30,
+        speed: 5000,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+          reverseDirection: index === 0,
+        },
+        breakpoints: {
+          0: { slidesPerView: 2 },
+          480: { slidesPerView: 2 },
+          780: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        },
+      });
+    });
+  });
+
+  var swiper = new Swiper(".TeamMem__slider", {
+    spaceBetween: 30,
+    slidesPerView: 2,
+    loop: true,
+    speed: 2000,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+  });
   var swiper = new Swiper(".student__slider", {
     spaceBetween: 30,
     slidesPerView: 2,
@@ -263,7 +329,7 @@
     },
   });
 
-    var swiper = new Swiper(".book__slider", {
+  var swiper = new Swiper(".book__slider", {
     spaceBetween: 30,
     slidesPerView: 2,
     loop: true,
@@ -284,45 +350,160 @@
     },
   });
 
+  var swiper = new Swiper(".mySwiper2", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    loop: true, // Enable loop
+    speed: 3000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1400: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+  var swiper = new Swiper(".impLinkSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    loop: true, // Enable loop
+    speed: 3000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1400: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var mySwiper = new Swiper(".swiper-container", {
+      direction: "horizontal", // or 'vertical'
+      loop: true,
+      centeredSlides: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      // Autoplay
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+
+      // Use slide or fade transition effect
+      speed: 2000,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+    });
+  });
+
   // green audit-->scope of work
   document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".greenAudit_slider", {
+    new Swiper(".greenAudit_slider", {
       loop: true,
       spaceBetween: 30,
-      speed: 800, // same as smartSpeed
+      speed: 800,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
-
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
-
-      slidesPerView: 1,
-
       breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        767: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-        },
+        0: { slidesPerView: 1 },
+        767: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 },
       },
     });
   });
+
+  const playBtn = document.getElementById("playBtn");
+  const video = document.getElementById("guideVideo");
+
+  playBtn.addEventListener("click", () => {
+    playBtn.style.display = "none";
+    video.style.pointerEvents = "auto"; // ✅ controls clickable
+    video.setAttribute("controls", "controls");
+    video.play();
+  });
+
+  VanillaTilt.init(document.querySelectorAll(".cta"), {
+    max: 6,
+    speed: 800,
+    glare: true,
+    "max-glare": 0.12,
+    scale: 1.015,
+    gyroscope: true,
+    mobile: false,
+  });
+
+  AOS.init({
+    duration: 900, // animation speed
+    easing: "ease-out-cubic",
+    once: true, // ek hi baar animate
+    offset: 120, // scroll se pehle trigger
+  });
 })(jQuery);
-AOS.init({
-  duration: 900, // animation speed
-  easing: "ease-out-cubic",
-  once: true, // ek hi baar animate
-  offset: 120, // scroll se pehle trigger
-});
