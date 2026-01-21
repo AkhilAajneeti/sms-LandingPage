@@ -240,6 +240,17 @@
     });
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof AOS !== "undefined") {
+      AOS.init({
+        duration: 900,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 120,
+      });
+    }
+  });
+   
   // swiper's
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -500,10 +511,6 @@
     mobile: false,
   });
 
-  AOS.init({
-    duration: 900, // animation speed
-    easing: "ease-out-cubic",
-    once: true, // ek hi baar animate
-    offset: 120, // scroll se pehle trigger
-  });
+
+
 })(jQuery);

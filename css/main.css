@@ -9199,8 +9199,16 @@ only screen and (min-width: 768px) and (max-width: 991px),
   width: 100%;
   margin-bottom: 30px;
   border-radius: 10px;
-  height: 270px;
+  height: 270px !important;
   object-fit: cover;
+}
+
+.it-teacher-details-left-info ul {
+  padding: 0px;
+}
+
+.it-teacher-details-left-info ul li a {
+  text-decoration: none;
 }
 
 @media (min-width:780px) {
@@ -9286,8 +9294,14 @@ only screen and (min-width: 768px) and (max-width: 991px),
 @media only screen and (min-width: 768px) and (max-width: 991px),
 (max-width: 767px) {
   .it-teacher-details-right {
-    padding: 60px 15px;
+    padding: 20px 15px;
     margin-left: 0;
+  }
+
+  .it-teacher-details-left-social {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #D9D9D9;
   }
 }
 
@@ -9741,7 +9755,9 @@ h2 img {
 /* Card Design */
 .knowledge-card {
   height: 100%;
-  background: #ffffff;
+ background: linear-gradient(135deg,
+      rgba(155, 28, 49, 0.08),
+      rgba(0, 0, 0, 0.02));
   border-radius: 20px;
   padding: 30px 28px;
   text-align: left;
@@ -9827,9 +9843,7 @@ h2 img {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-      rgba(155, 28, 49, 0.08),
-      rgba(0, 0, 0, 0.02));
+ 
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -10553,6 +10567,10 @@ h2 img {
   border: 1px solid #930018;
 }
 
+.team-card-items a {
+  text-decoration: none;
+}
+
 @media(max-width:580px) {
   .fitness-image.style-2::before {
     left: auto;
@@ -10572,17 +10590,44 @@ h2 img {
     padding: 20px !important;
     text-align: justify;
   }
-  .IsoCard-2 ul,.IsoCard-1 ul {
+
+  .IsoCard-2 ul,
+  .IsoCard-1 ul {
     padding: 0px !important;
-    text-align: justify!important;
+    text-align: justify !important;
   }
-  .facilityCampup .content p{
-    text-align: justify!important;
+
+  .facilityCampup .content p {
+    text-align: justify !important;
   }
-  .ComputerCenter p,.about-section-5 p{
-    text-align: justify!important;
+
+  .ComputerCenter p,
+  .about-section-5 p,
+  .OutreachContainer p,.accolades p {
+    text-align: justify !important;
   }
-  .LibraryPortal .card ul{
-     padding: 0px !important;
+
+  .LibraryPortal .card ul {
+    padding: 0px !important;
   }
+
+  .environmentalAuditing ul {
+    padding: 10px;
+  }
+  .nptel .content-1 p{
+    text-align: justify;
+  }
+  .faq__accordion .accordion-button {
+    padding-left: 2px;
+}
+}
+
+tbody td a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teamMember .card img{
+  height:304px;
+  object-fit: cover;
 }
